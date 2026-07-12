@@ -1,0 +1,159 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NovaCraft</title>
+<style>:root{--bg:#080d1c;--p:#101a30;--line:#2b3954;--v:#8057ff;--b:#35baff;--mut:#98a7c1}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 0 0,#202b65 0,transparent 35%),var(--bg);color:#f5f7ff;font:15px Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0;color:white}.hidden{display:none!important}.login{min-height:100vh;display:grid;place-items:center;padding:20px}.card{background:#101a30eF;border:1px solid var(--line);border-radius:18px;padding:38px;width:min(430px,100%);box-shadow:0 25px 65px #0008;text-align:center}.logo{display:inline-grid;place-items:center;width:49px;height:49px;border-radius:12px;background:linear-gradient(135deg,var(--b),var(--v));font-size:23px;font-weight:bold}.eyebrow{color:var(--b);font-size:11px;letter-spacing:1.7px;font-weight:bold;margin-top:22px}.card h1{margin:7px;font-size:34px}.purple{color:#9a76ff}.lead{color:var(--mut);line-height:1.5}label{text-align:left;display:block;font-size:13px;margin:15px 0 6px}input,select{width:100%;padding:12px;background:#080f20;border:1px solid var(--line);border-radius:8px;color:white}.primary{background:linear-gradient(100deg,#6049e8,#268df0);padding:13px 17px;border-radius:8px;font-weight:bold}.wide{width:100%;margin-top:20px}.link{display:block;color:#a891ff;text-decoration:none;margin-top:19px;font-size:13px}header{height:72px;max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px}.brand{font-size:20px;font-weight:bold}.brand i{font-style:normal;background:var(--v);padding:8px 11px;border-radius:8px;margin-right:7px}nav{display:flex;gap:21px;color:var(--mut);font-size:13px}.user{background:#253657;border-radius:50%;padding:9px 12px}.hero{max-width:1120px;margin:auto;padding:80px 20px;min-height:440px}.hero h1{font-size:clamp(47px,7vw,75px);line-height:.95;margin:10px 0}.hero p{color:var(--mut);max-width:430px;line-height:1.6}.server{display:inline-block;margin-top:25px;padding:13px 17px;border:1px solid var(--line);border-radius:9px;background:#101a30}.online{color:#62df9c}.wrap{max-width:1120px;margin:auto;padding:25px 20px 70px}h2{font-size:29px}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.product{background:var(--p);border:1px solid var(--line);border-radius:12px;overflow:hidden}.art{height:120px;display:grid;place-items:center;font-size:58px;background:linear-gradient(135deg,#27226a,#1886c8)}.product div:last-child{padding:14px}.product p{font-size:12px;color:var(--mut);height:29px}.row{display:flex;justify-content:space-between;align-items:center}.add{background:#2c426e;padding:8px;border-radius:7px}.cart{position:fixed;right:18px;bottom:18px;background:#694ce7;border-radius:30px;padding:14px 19px;box-shadow:0 8px 24px #0008}.side{position:fixed;inset:0 auto 0 0;width:230px;background:#0e172a;border-right:1px solid var(--line);padding:20px}.side button,.side a{display:block;width:100%;padding:11px;text-align:left;border-radius:7px;background:none;color:#adbad2;text-decoration:none;margin:3px 0}.side button:hover,.side .active{background:#273a65;color:white}.admin{margin-left:230px}.admin header{max-width:none;border-bottom:1px solid var(--line);padding:0 35px}.content{padding:30px 35px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.metric,.panel{background:var(--p);border:1px solid var(--line);border-radius:11px;padding:17px}.metric small{color:var(--mut)}.metric b{font-size:25px;display:block;margin:7px 0}.table{width:100%;border-collapse:collapse;background:var(--p);border:1px solid var(--line)}th,td{text-align:left;padding:13px;border-bottom:1px solid #25334d;font-size:13px}th{font-size:10px;color:var(--mut)}.edit,.del{padding:7px;border-radius:6px;background:#294272}.del{background:#522941}.modal{position:fixed;inset:0;background:#000a;display:grid;place-items:center;padding:20px}.modal .card{text-align:left}.close{float:right;background:none;font-size:25px;color:#aab8cf}.notice{position:fixed;bottom:20px;left:50%;transform:translate(-50%,90px);background:#edf2ff;color:#11182a;padding:12px;border-radius:8px;transition:.2s}.notice.show{transform:translate(-50%,0)}@media(max-width:700px){nav{display:none}.products,.metrics{grid-template-columns:1fr 1fr}.side{width:58px;padding:12px 5px}.side h2,.side button,.side a{font-size:0}.side button{font-size:17px;text-align:center}.admin{margin-left:58px}.admin header,.content{padding-left:16px;padding-right:16px}}</style>
+</head>
+<body>
+<main id="home">
+<section id="playerLogin" class="login">
+<div class="card">
+<i class="logo">N</i>
+<p class="eyebrow">BIENVENIDO A</p>
+<h1 id="loginName">Nova<span class="purple">Craft</span>
+</h1>
+<p class="lead">Ingresa tu nick de Minecraft para acceder a la tienda.</p>
+<form id="nickForm">
+<label>Nick de Minecraft</label>
+<input id="nick" maxlength="16" required placeholder="Ej. Brighan123">
+<button class="primary wide">Entrar a la tienda →</button>
+</form>
+<a class="link" href="#" id="openAdmin">Acceso de administrador</a>
+</div>
+</section>
+<div id="shop" class="hidden">
+<header>
+<div class="brand">
+<i id="initial">N</i>
+<span id="brand">NovaCraft</span>
+</div>
+<nav>Inicio　 Tienda　 Rangos　 Kits　 Ofertas　 Soporte</nav>
+<button class="user" id="who">P</button>
+</header>
+<section class="hero">
+<p class="eyebrow">✦ TEMPORADA 5 · YA DISPONIBLE</p>
+<h1>Forja tu propia<br>
+<span class="purple">leyenda.</span>
+</h1>
+<p>Un mundo de aventuras, alianzas y desafíos te espera. ¿Estás listo para dejar tu marca?</p>
+<div class="server">
+<b id="ip">play.novacraft.net</b> · <span class="online">1,284 online</span>
+</div>
+</section>
+<section class="wrap">
+<p class="eyebrow">TIENDA</p>
+<h2>Productos destacados</h2>
+<div class="products" id="productGrid">
+</div>
+</section>
+<button class="cart" id="cartBtn">🛒 Carrito (<span id="count">0</span>)</button>
+</div>
+</main>
+<main id="adminLogin" class="login hidden">
+<div class="card">
+<i class="logo">N</i>
+<p class="eyebrow">ÁREA RESTRINGIDA</p>
+<h1>Panel <span class="purple">Admin</span>
+</h1>
+<form id="adminForm">
+<label>Usuario</label>
+<input id="adminUser" required placeholder="admin">
+<label>Contraseña</label>
+<input id="adminPass" type="password" required>
+<button class="primary wide">Entrar al panel →</button>
+</form>
+<small>Demo: admin / novacraft2026</small>
+<a class="link" href="#" id="back">← Volver</a>
+</div>
+</main>
+<main id="admin" class="hidden">
+<aside class="side">
+<h2>▣ Nova<span class="purple">Craft</span>
+</h2>
+<button class="active" data-view="dash">▦ Dashboard</button>
+<button data-view="products">◈ Productos</button>
+<button data-view="settings">⚙ Configuración</button>
+<a href="#" id="viewStore">↗ Ver tienda</a>
+<button id="logout">↪ Salir</button>
+</aside>
+<section class="admin">
+<header>
+<div>
+<p class="eyebrow">ADMINISTRACIÓN</p>
+<h2 id="adminTitle">Dashboard</h2>
+</div>
+<b>Administrador</b>
+</header>
+<div class="content" id="adminContent">
+</div>
+</section>
+</main>
+<div id="modal" class="modal hidden">
+<form class="card" id="productForm">
+<button class="close" type="button" id="close">×</button>
+<h2 id="formTitle">Nuevo producto</h2>
+<input id="pid" type="hidden">
+<label>Nombre</label>
+<input id="pname" required>
+<label>Precio USD</label>
+<input id="pprice" type="number" step="0.01" required>
+<label>Descripción</label>
+<input id="pdesc" required>
+<label>Categoría</label>
+<select id="pcat">
+<option>Rangos</option>
+<option>Kits</option>
+<option>Llaves</option>
+<option>Coins</option>
+</select>
+<button class="primary wide">Guardar producto →</button>
+</form>
+</div>
+<div id="toast" class="notice">
+</div>
+<script>const $=s=>document.querySelector(s);let settings=JSON.parse(localStorage.getItem('one-settings')||'{"name":"NovaCraft","ip":"play.novacraft.net"}'),items=JSON.parse(localStorage.getItem('one-products')||'null')||[{id:1,name:'Rango Titan',price:19.99,desc:'Beneficios exclusivos',cat:'Rangos',icon:'♛'},{id:2,name:'Kit Guerrero',price:8.99,desc:'Armadura y recursos',cat:'Kits',icon:'⚔'},{id:3,name:'Llaves Épicas',price:6.49,desc:'Grandes recompensas',cat:'Llaves',icon:'🗝'},{id:4,name:'5,000 Coins',price:4.99,desc:'Monedas del servidor',cat:'Coins',icon:'◈'}],cart=[];function note(x){$('#toast').textContent=x;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),1800)}function shop(){document.title=settings.name;$('#brand').textContent=settings.name;$('#loginName').textContent=settings.name;$('#initial').textContent=settings.name[0];$('#ip').textContent=settings.ip;$('#productGrid').innerHTML=items.map(p=>`<article class="product">
+<div class="art">${p.icon||'◈'}</div>
+<div>
+<b>${p.name}</b>
+<p>${p.desc}</p>
+<div class="row">
+<strong>$${(+p.price).toFixed(2)}</strong>
+<button class="add" data-add="${p.id}">+ Añadir</button>
+</div>
+</div>
+</article>`).join('')}function enter(){let n=$('#nick').value.trim();if(n.length<3)return note('Escribe un nick válido');localStorage.setItem('one-nick',n);$('#who').textContent=n[0].toUpperCase();$('#playerLogin').classList.add('hidden');$('#shop').classList.remove('hidden');shop()}$('#nickForm').onsubmit=e=>{e.preventDefault();enter()};$('#openAdmin').onclick=e=>{e.preventDefault();$('#home').classList.add('hidden');$('#adminLogin').classList.remove('hidden')};$('#back').onclick=e=>{e.preventDefault();$('#adminLogin').classList.add('hidden');$('#home').classList.remove('hidden')};document.onclick=e=>{let id=e.target.dataset.add;if(id){cart.push(items.find(x=>x.id==id));$('#count').textContent=cart.length;note('Añadido al carrito')}};$('#cartBtn').onclick=()=>note(cart.length?'Total: $'+cart.reduce((a,x)=>a+ +x.price,0).toFixed(2):'Tu carrito está vacío');$('#adminForm').onsubmit=e=>{e.preventDefault();if($('#adminUser').value==='admin'&&$('#adminPass').value==='novacraft2026'){ $('#adminLogin').classList.add('hidden');$('#admin').classList.remove('hidden');render('dash')}else note('Credenciales incorrectas')};function render(v){$('#adminTitle').textContent=v==='dash'?'Dashboard':v==='products'?'Productos':'Configuración';$('#adminContent').innerHTML=v==='dash'?`<div class="metrics">${[['VENTAS HOY','$1,284'],['VENTAS MES','$18,904'],['PRODUCTOS','847'],['JUGADORES','24,184']].map(x=>`<div class="metric">
+<small>${x[0]}</small>
+<b>${x[1]}</b>
+<span class="online">↑ 12.4%</span>
+</div>`).join('')}</div>`:v==='products'?`<button class="primary" id="new">+ Nuevo producto</button>
+<table class="table">
+<tr>
+<th>PRODUCTO</th>
+<th>CATEGORÍA</th>
+<th>PRECIO</th>
+<th>ACCIONES</th>
+</tr>${items.map(p=>`<tr>
+<td>
+<b>${p.name}</b>
+<small>${p.desc}</small>
+</td>
+<td>${p.cat}</td>
+<td>$${p.price}</td>
+<td>
+<button class="edit" data-edit="${p.id}">Editar</button> <button class="del" data-del="${p.id}">Eliminar</button>
+</td>
+</tr>`).join('')}</table>`:`<div class="panel">
+<h2>Configuración general</h2>
+<label>Nombre general de la página</label>
+<input id="sname" value="${settings.name}">
+<label>IP del servidor</label>
+<input id="sip" value="${settings.ip}">
+<button class="primary wide" id="save">Guardar cambios</button>
+</div>`;bind()}function bind(){$('#new')?.addEventListener('click',()=>form());$('#save')?.addEventListener('click',()=>{settings={name:$('#sname').value||'NovaCraft',ip:$('#sip').value||'play.novacraft.net'};localStorage.setItem('one-settings',JSON.stringify(settings));note('Guardado. Actualiza la tienda.');shop()});document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>form(items.find(x=>x.id==b.dataset.edit)));document.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{items=items.filter(x=>x.id!=b.dataset.del);localStorage.setItem('one-products',JSON.stringify(items));render('products')})}function form(p){$('#modal').classList.remove('hidden');$('#pid').value=p?.id||'';$('#pname').value=p?.name||'';$('#pprice').value=p?.price||'';$('#pdesc').value=p?.desc||'';$('#pcat').value=p?.cat||'Rangos'}$('#close').onclick=()=>$('#modal').classList.add('hidden');$('#productForm').onsubmit=e=>{e.preventDefault();let id=$('#pid').value,p={id:id?+id:Date.now(),name:$('#pname').value,price:$('#pprice').value,desc:$('#pdesc').value,cat:$('#pcat').value,icon:'◈'};items=id?items.map(x=>x.id===p.id?{...x,...p}:x):[...items,p];localStorage.setItem('one-products',JSON.stringify(items));$('#modal').classList.add('hidden');render('products');shop();note('Producto guardado')};document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>render(b.dataset.view));$('#viewStore').onclick=e=>{e.preventDefault();$('#admin').classList.add('hidden');$('#home').classList.remove('hidden');$('#playerLogin').classList.add('hidden');$('#shop').classList.remove('hidden');shop()};$('#logout').onclick=()=>location.reload();if(localStorage.getItem('one-nick'))enter();</script>
+</body>
+</html>
+
+
+
